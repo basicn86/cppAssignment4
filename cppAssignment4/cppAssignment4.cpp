@@ -25,6 +25,9 @@ int main(int argc, char* argv[])
     int countO = 0;
     int countU = 0;
     int countTotal = 0;
+    int countX = 0;
+    int countZ = 0;
+    int countW = 0;
 
     //this is the code from the example
     //if there is less than two arguments, then quit the program
@@ -69,11 +72,23 @@ int main(int argc, char* argv[])
         case 'U':
             countU++;
             break;
+        case 'w':
+        case 'W':
+            countW++;
+            break;
+        case 'x':
+        case 'X':
+            countX++;
+            break;
+        case 'z':
+        case 'Z':
+            countZ++;
+            break;
         default:
             break;
         }
     }
-    countTotal = countA + countE + countI + countO + countU; //add all the counts to the total count
+    countTotal = countA + countE + countI + countO + countU + countX + countW + countZ; //add all the counts to the total count
 
 
     //display each count in the 
@@ -88,6 +103,12 @@ int main(int argc, char* argv[])
     cout << left << "The count of O's:" << countO << endl;
     cout << setw(rowWidth);
     cout << left << "The count of U's:" << countU << endl;
+    cout << setw(rowWidth);
+    cout << left << "The count of W's:" << countW << endl;
+    cout << setw(rowWidth);
+    cout << left << "The count of X's:" << countX << endl;
+    cout << setw(rowWidth);
+    cout << left << "The count of Z's:" << countZ << endl;
     cout << setw(rowWidth);
     cout << left << "The total count of vowels is:" << countTotal << endl;
 
